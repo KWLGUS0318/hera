@@ -1,0 +1,24 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+
+  
+  justify-content: center;
+  align-items: center;
+
+&>header{
+  width: inherit;
+  height: 15%;
+  border: 1px solid #000;
+  position: relative;
+
+  &>img{
+    position: relative;
+    left: 5;top: 2vw;
+  }
+}
+
+
+}
