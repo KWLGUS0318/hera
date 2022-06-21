@@ -1,24 +1,111 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-#root{
-  width: 100vw;
-  height: 100vh;
-
-  
-  justify-content: center;
+@mixin display {
+  display: flex;
   align-items: center;
+}
 
-&>header{
-  width: inherit;
-  height: 15%;
-  border: 1px solid #000;
-  position: relative;
+#root {
+  width: 100vw;
+  height: 300vh;
 
-  &>img{
+  &>header {
+    width: inherit;
+    height: 15vh;
+    border-bottom: 1px solid #000;
     position: relative;
-    left: 5;top: 2vw;
+
+    &>img {
+      position: absolute;
+      left: 50%;
+      top: 30px;
+    }
+  }
+
+}
+
+/* 바탕*/
+
+.menu {
+  position: relative;
+  display: inline-block;
+  width: inherit;
+  height: 10vh;
+  background-color: #000;
+
+  &:hover{
+    background-color: #fff;
+    border-bottom: 1px solid #000;
   }
 }
 
 
+
+/* 버튼*/
+.menubtn {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  position: sticky;
+  margin: 30px 0px 0px 20vw
+}
+
+/* a link*/
+
+.link {
+  width: 80vw;
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 60px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;  display: flex;
+  visibility: hidden;
+  
+  &>a {
+  width: 20vw;
+  text-align: center;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  
+
+  &:hover{
+    background-color: #000; color: #fff;
+    display: flex;
+
+
+  }
+}
+
+}
+.menu:hover .link{visibility: visible;}
+.menu:hover .menubtn {background-color: #fff; color: #000; border: none;}
+
+.add{
+  width: 100vw;
+  height: 40vh;
+  &>img{
+    width: inherit;
+    height: inherit;
+    position: relative;
+    top: 10vw;
+    }
+  }
+  
+  &>p{
+    font-size: 2rem;
+    position: relative;
+    top: -255px; left: 3vw;
+  }
+
+.enter{
+  position: absolute;
+  top: 450px; left: 55vw;
+  width: 20vw;
 }
